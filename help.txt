@@ -1,0 +1,76 @@
+Methods:
+
+    move(): the bot goes ahead one field
+    turn(direction): turn to the specified direction
+        direction can be "left" or "right"
+        Example: turn(left) -> the bot turns left
+
+Fork:
+
+    Alwas starts with if(condition) where the condition could be
+    "FieldIs~" or "FieldIsNot~". The color replaced by ~.
+    Always ends with fi.
+    If the condition is true, the bot execute the code
+    between if(condition) and fi.
+    Example:
+
+       if(FieldIsRed)
+           turn(left)
+       fi
+
+    in this example, if the bot is on a red field, than it turns left
+
+Loops:
+
+    Always ends with endloop.
+
+    while(condition):
+       The bot execute the code between while(condition) and endloop
+       while the condition is true. The condition could be  "FieldIs~" , "FieldIsNot~" or "true".
+       The color replaced by ~. If the condition is "true", than the condition always be true, 
+       so it will be an endless loop.
+       Example:
+
+          while(FieldIsNotGreen)
+             move()
+          endloop
+
+       in this example, while the bot doesn't step on a green field, it goes ahead.
+
+    for(number):
+
+       The bot execute the code between for(number) and endloop number times.
+       If you don't write any number in the brackets, it will be an endless loop.
+       Example:
+
+          for(3)
+             move()
+          endloop
+
+       in this example the bot goes ahead 3 times.
+
+Colors:
+    - Red
+    - Green
+    - Cyan(The goal position)
+    - Blue
+    - Yellow
+    - Gray
+
+Functions:
+
+    You can write functions to Function1 and Function2 testareas. If the textarea is gray,
+    than you can't write in it, but there can be code what you can use but can't change.
+    You can use functions in any function with function1() and function2() code words.
+    Example: 
+
+      Main:
+        function1()
+       
+      Function1:
+         if(FieldIsNotRed)
+            move()
+            function1()
+         fi
+
+     in this example the bot goes ahead while it doesn't step on a red field.

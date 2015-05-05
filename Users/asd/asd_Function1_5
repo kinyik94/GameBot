@@ -1,0 +1,7 @@
+if(FieldIsNotCyan)
+if(FieldIsGreen)
+turn(right)
+fi
+move()
+function1()
+fi
