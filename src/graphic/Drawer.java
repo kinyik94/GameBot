@@ -10,6 +10,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystems;
 
 import javax.imageio.ImageIO;
 import javax.swing.JComponent;
@@ -81,7 +82,7 @@ public class Drawer extends JComponent{
 						
 				}
 			
-			BufferedImage img = ImageIO.read(new File("bot" + b.getDir() +".png"));
+			BufferedImage img = ImageIO.read(new File("bot" + FileSystems.getDefault().getSeparator() + "bot" + b.getDir() +".png"));
 			g.drawImage(img, height * b.getPosition()[1] - 15, width * b.getPosition()[0] + 1, null);
 
 		}

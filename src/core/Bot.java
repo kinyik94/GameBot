@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.nio.file.FileSystems;
 
 import command.RuntimeErrorException;
 
@@ -178,7 +179,7 @@ public class Bot implements Serializable{
 	public static Bot read(int levelNumber) throws ClassNotFoundException{
 		Bot b = null;
 		try{
-			ObjectInputStream in = new ObjectInputStream(new FileInputStream(levelNumber + ".lev"));
+			ObjectInputStream in = new ObjectInputStream(new FileInputStream("levels" + FileSystems.getDefault().getSeparator() + levelNumber + ".lev"));
 			b = (Bot) in.readObject();
 			in.close();
 		}
