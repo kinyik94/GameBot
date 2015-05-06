@@ -5,10 +5,10 @@ Documentation in the Doc folder.
 
 Compile and Run on Linux:
 
-    compile: ./makejar.sh
-    run: java -jar GameBot.jar
+    ./makejar.sh
+    java -jar GameBot.jar
     
 Compile and Run on windows
 
-    compile: makejar.bat
-    run: java -jar GameBot.jar
+    makejar.bat
+    java -jar GameBot.jar
